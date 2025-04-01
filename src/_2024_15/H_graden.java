@@ -12,7 +12,7 @@ public class H_graden {
         }
     }
     static Node[] nodes;
-
+    // hello-world
     static long countValid(int root) {
         boolean[] visited = new boolean[n + 1];
         Queue<Integer> queue = new LinkedList<>();
