@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
 public class myUtilts {
-    public static long quickPowMod(long a, long b, long mod) {
+    public static long quickPowMod(long a, long b, long mod) {//快速幂取模
         long res = 1;
         while(a != 0){
             if((b & 1) == 1) res = res*a%mod;
@@ -15,6 +15,12 @@ public class myUtilts {
         return res;
     }//费马小定理
 
+    public static long gcd(long a, long b) {//最大公约数
+        return b == 0 ? a : gcd(b, a%b);
+    }
+    public static long lcm(long a, long b) {//最小公倍数
+        return a*b/gcd(a, b);
+    }
     public static void main(String[] args) {
         PriorityQueue<Integer> list = new PriorityQueue<>((a, b)->b-a);
         list.offer(1);
