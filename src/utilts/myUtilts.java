@@ -1,5 +1,7 @@
 package utilts;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors;
@@ -21,15 +23,35 @@ public class myUtilts {
     public static long lcm(long a, long b) {//最小公倍数
         return a*b/gcd(a, b);
     }
-    public static void main(String[] args) {
-        PriorityQueue<Integer> list = new PriorityQueue<>((a, b)->b-a);
-        list.offer(1);
-        System.out.println(list.peek());
-        System.out.println(list.size());
-        System.out.println(list.poll());
-        System.out.println(list.size());
-        int[] arr = {1,2,3,4,5};
-        int[] sorted = Arrays.stream(arr).boxed().sorted((a, b)->a-b).limit(3).mapToInt(Integer::intValue).toArray();
-        System.out.println(Arrays.toString(sorted));
+    public static void quickInOut() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw =  new BufferedWriter(new OutputStreamWriter(System.out));
+        String line = br.readLine();
+        String[] lines = line.split("\\s+");
+        String tmp = "123456";
+        String[] tmps = tmp.split("");
+        bw.write(Arrays.toString(tmps));
+        bw.flush();
+        br.close();
+        bw.close();
+    }
+    public static void jinZhi(){
+        int a = Integer.parseInt("1010", 2);//转成十进制
+        String b = Integer.toString(10,2);//转成其他进制
+    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw =  new BufferedWriter(new OutputStreamWriter(System.out));
+        String[] line1 = br.readLine().split("\\s+");
+        int[] sortedNums = Arrays.stream(br.readLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .sorted()
+                .toArray();
+        bw.write(Arrays.toString(sortedNums));
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
