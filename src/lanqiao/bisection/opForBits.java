@@ -1,4 +1,4 @@
-package lanqiao;
+package lanqiao.bisection;
 
 import java.util.Scanner;
 // 1:无需package

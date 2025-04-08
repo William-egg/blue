@@ -41,17 +41,23 @@ public class myUtilts {
         int a = Integer.parseInt("1010", 2);//转成十进制
         String b = Integer.toString(10,2);//转成其他进制
     }
+
+    public static long calc(long n){
+        long res = 0;
+        while(n!=0){
+            res = res+n/5;
+            n = n/5;
+        }
+        return res;
+    }
+    public static void arrayToNums(){
+
+    }
+    public static void tryFun(int x){
+        x = 3;
+    }
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw =  new BufferedWriter(new OutputStreamWriter(System.out));
-        String[] line1 = br.readLine().split("\\s+");
-        int[] sortedNums = Arrays.stream(br.readLine().split("\\s+"))
-                .mapToInt(Integer::parseInt)
-                .sorted()
-                .toArray();
-        bw.write(Arrays.toString(sortedNums));
-        bw.flush();
-        bw.close();
-        br.close();
+//        int i = (int) 1e9;
+        System.out.println(Long.compare((long) 1e12,(long)Integer.MAX_VALUE));
     }
 }
