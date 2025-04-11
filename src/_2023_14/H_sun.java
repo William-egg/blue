@@ -162,6 +162,7 @@ public class H_sun {
             if(cross2 != cross1) return Long.compare(cross1 , cross2);
             else return  b[2] - a[2];
         });
+
         for(int i = 1;i<=n;i++){
             int x = scan.nextInt();
             int y = scan.nextInt();

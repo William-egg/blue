@@ -72,8 +72,11 @@ public class CollectionLearn {
 //        res.add("b");
 //        res.add("a");
 //        System.out.println(res.toString());
-        StringBuffer sb = new StringBuffer("hello");
-        sb.deleteCharAt(sb.length()-1);
-        System.out.println(sb.toString());
+        LinkedList<Integer> list = new LinkedList<>();
+        list.push(1);
+        list.push((2));
+        System.out.println(list.removeFirst());
+
+
     }
 }
