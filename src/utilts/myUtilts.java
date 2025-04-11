@@ -1,9 +1,7 @@
 package utilts;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.PriorityQueue;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class myUtilts {
@@ -57,7 +55,7 @@ public class myUtilts {
         x = 3;
     }
     public static void main(String[] args) throws IOException {
-//        int i = (int) 1e9;
-        System.out.println(Long.compare((long) 1e12,(long)Integer.MAX_VALUE));
+        int[] nums = new int[5];
+        PriorityQueue<Integer> p = new PriorityQueue<>(Comparator.comparingInt(a -> nums[a]));
     }
 }
