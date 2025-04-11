@@ -5,7 +5,10 @@ import java.util.Map;
 
 public class MapLearn {
     public static void main(String[] args) {
-        Map<Integer,Integer> map = new HashMap<>();
-//        map.
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1,1);
+        for(Map.Entry<Integer,Integer> e: map.entrySet()){
+            System.out.println(e);
+        }
     }
 }
